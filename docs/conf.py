@@ -1,3 +1,11 @@
+import sys
+from pathlib import Path
+
+# Copy GPX files before building
+sys.path.insert(0, str(Path(__file__).parent))
+from _build_gpx import copy_gpx_files
+copy_gpx_files()
+
 project = 'Hill Walks'
 copyright = '2026, Mohana Das'
 author = 'Mohana Das'
