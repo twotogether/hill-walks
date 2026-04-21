@@ -44,8 +44,8 @@ const hillsData = {
     {
       "name": "Eildon Mid Hill",
       "region": "East Lothian",
-      "latitude": 55.5813,
-      "longitude": 2.71855,
+      "latitude": 55.582432,
+      "longitude": -2.7177954,
       "elevation": 422,
       "difficulty": "Medium",
       "type": "Moorland",
