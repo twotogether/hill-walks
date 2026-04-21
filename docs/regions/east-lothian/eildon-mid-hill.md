@@ -4,7 +4,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Coordinates** | 55.582432, -2.7177954 |
+| **Coordinates** | 55.582432, -2.715 |
 | **Hill Type** | Moorland |
 | **Difficulty** | Medium |
 | **Elevation** | 422 m |
