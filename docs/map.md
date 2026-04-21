@@ -89,16 +89,28 @@ if (hillsData.hills && hillsData.hills.length > 0) {
     // Try to load GPX file for this hill
     const hillPath = hill.name.toLowerCase().replace(/\s+/g, '-');
     const gpxFilePath = `_static/gpx/${hillPath}.gpx`;
-    console.log(`Attempting to load GPX: ${gpxFilePath}`);
+    console.log(`📍 Attempting to load GPX: ${gpxFilePath}`);
     
     fetch(gpxFilePath)
-      .then(response => response.text())
+      .then(response => {
+        console.log(`📡 Fetch response status: ${response.status}`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.text();
+      })
       .then(gpxText => {
+        console.log(`📄 GPX text length: ${gpxText.length} chars`);
         const parser = new DOMParser();
         const gpxDoc = parser.parseFromString(gpxText, 'text/xml');
         
+        if (gpxDoc.documentElement.nodeName === 'parsererror') {
+          console.error(`❌ GPX parsing error: ${gpxDoc.documentElement.textContent}`);
+          return;
+        }
+        
         // Extract track points
         const trkpts = gpxDoc.querySelectorAll('trkpt');
+        console.log(`📍 Found ${trkpts.length} trackpoints`);
+        
         if (trkpts.length > 0) {
           const latlngs = Array.from(trkpts).map(pt => [
             parseFloat(pt.getAttribute('lat')),
@@ -117,6 +129,8 @@ if (hillsData.hills && hillsData.hills.length > 0) {
           if (document.getElementById('gpxToggle').checked) {
             polyline.addTo(map);
           }
+        } else {
+          console.warn(`⚠ No trackpoints found in ${hillPath}.gpx`);
         }
       })
       .catch(err => console.error(`✗ Failed to load GPX for ${hill.name}:`, err));

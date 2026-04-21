@@ -34,14 +34,26 @@ Buses and trains to North Berwick
 
 ## Photos
 
-![View from the approach path](images/north-berwick-law/_DSF2889.jpg)
+```{figure} images/north-berwick-law/_DSF2889.jpg
+View from the approach path (note that we walked from East Linton)
+```
 
-![Ascending towards the summit](images/north-berwick-law/_DSF2890.jpg)
+```{figure} images/north-berwick-law/_DSF2890.jpg
+Spot the rock climbers
+```
 
-![Summit approach with whale jawbones](images/north-berwick-law/_DSF2892.jpg)
+```{figure} images/north-berwick-law/_DSF2892.jpg
+Half-way up the law
+```
 
-![Firth of Forth views from summit](images/north-berwick-law/_DSF2893.jpg)
+```{figure} images/north-berwick-law/_DSF2893.jpg
+Views of North Berwick en-route
+```
 
-![Panoramic view from the top](images/north-berwick-law/_DSF2895.jpg)
+```{figure} images/north-berwick-law/_DSF2895.jpg
+Views from the summit: Craigleith Island and North Berwick
+```
 
-![Bass Rock visible in the distance](images/north-berwick-law/_DSF2897.jpg)
+```{figure} images/north-berwick-law/_DSF2897.jpg
+Fibreglass whale bone at the North Berwick Law summit
+```
