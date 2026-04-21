@@ -6,8 +6,8 @@ All hills climbed are marked with green dots on the map below.
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/leaflet-gpx.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/leaflet-gpx.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/togeojson@0.16.0/togeojson.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tmcw/togeojson@5.8.0/togeojson.umd.js"></script>
 
 <div style="margin-bottom: 10px;">
   <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px;">
@@ -87,38 +87,39 @@ if (hillsData.hills && hillsData.hills.length > 0) {
       .addTo(map);
     
     // Try to load GPX file for this hill
-    if (typeof L.GPX !== 'undefined') {
-      const hillPath = hill.name.toLowerCase().replace(/\s+/g, '-');
-      const gpxFilePath = `_static/gpx/${hillPath}.gpx`;
-      console.log(`Attempting to load GPX: ${gpxFilePath}`);
-      try {
-        new L.GPX(gpxFilePath, {
-          async: true,
-          marker: {
-            startIconUrl: null,
-            endIconUrl: null,
-            shadowUrl: null
-          },
-          polyline_options: {
+    const hillPath = hill.name.toLowerCase().replace(/\s+/g, '-');
+    const gpxFilePath = `_static/gpx/${hillPath}.gpx`;
+    console.log(`Attempting to load GPX: ${gpxFilePath}`);
+    
+    fetch(gpxFilePath)
+      .then(response => response.text())
+      .then(gpxText => {
+        const parser = new DOMParser();
+        const gpxDoc = parser.parseFromString(gpxText, 'text/xml');
+        
+        // Extract track points
+        const trkpts = gpxDoc.querySelectorAll('trkpt');
+        if (trkpts.length > 0) {
+          const latlngs = Array.from(trkpts).map(pt => [
+            parseFloat(pt.getAttribute('lat')),
+            parseFloat(pt.getAttribute('lon'))
+          ]);
+          
+          const polyline = L.polyline(latlngs, {
             color: 'blue',
             weight: 3,
             opacity: 0.7
-          }
-        }).on('loaded', function(e) {
-          console.log(`✓ GPX loaded for ${hill.name}`);
-          gpxLayers[hill.name] = e.target;
+          });
+          
+          gpxLayers[hill.name] = polyline;
+          console.log(`✓ GPX loaded for ${hill.name} with ${latlngs.length} points`);
+          
           if (document.getElementById('gpxToggle').checked) {
-            map.addLayer(e.target);
+            polyline.addTo(map);
           }
-        }).on('error', function(e) {
-          console.error(`✗ Failed to load GPX for ${hill.name}:`, e);
-        });
-      } catch(err) {
-        console.error(`Error loading GPX for ${hill.name}:`, err);
-      }
-    } else {
-      console.warn('Leaflet-GPX library not loaded');
-    }
+        }
+      })
+      .catch(err => console.error(`✗ Failed to load GPX for ${hill.name}:`, err));
   });
   
   // Center map on first hill
