@@ -38,6 +38,17 @@ figcaption {
   padding-bottom: 2rem;
 }
 
+/* Inline code styling */
+code,
+code.literal,
+.rst-content code {
+  color: #8B0000;
+  background-color: rgba(139, 0, 0, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 /* Link colors - green theme */
 a.reference.internal,
 a.reference.internal:visited {

@@ -34,12 +34,16 @@ We climbed the North Berwick Law on the John Muir Way from [East Linton to North
 
 Buses and trains to North Berwick
 
+## Facilities
+
+- **Food**: Lots of excellent cafes and eateries in North Berwick. We love `Bostock` for its fabulous baked goods and `Lobster Shack` for fresh seafood.
+- **Public Toilets**: Available in North Berwick harbour, the Scottish Seabird Centre, and [Quality Street](https://maps.app.goo.gl/Biz4Zu7qhrr3AQTu6).
+
 ## Photos
 
 ```{figure} images/north-berwick-law/_DSF2889.jpg
 View from the approach path (note that we walked from East Linton)
 ```
-</br>
 
 ```{figure} images/north-berwick-law/_DSF2890.jpg
 Spot the rock climbers

@@ -40,6 +40,11 @@ Start from Melrose town centre and follow the marked path up the slope. The terr
 - Borders buses from Edinburgh to Melrose
 - Borders rail from Edinburgh to Tweedbank
 
+## Facilities
+
+- **Food**: Lovely sandwiches and soup at `Apples for Jam`. Excellent coffee at `Haus and Co`. Also `Twelve Triangles` who bake tasty goods. For a hearty lunch, head to `Burts Hotel`.
+- **Public Toilets**: Paid, cash-only toilets on [Abbey Street](https://maps.app.goo.gl/Q4bAXVyCfMTNzhLy5). If you are a Historic Environment Scotland member, consider using the facilities at [Melrose Abbey](https://www.historicenvironment.scot/visit-a-place/places/melrose-abbey/prices-times/).
+
 ## Photos
 
 ```{figure} images/eildon-mid-hill-view.jpg
