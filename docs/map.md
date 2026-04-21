@@ -13,9 +13,10 @@ All hills climbed are marked with green dots on the map below.
 // Initialize map centered on Scotland
 const map = L.map('map').setView([55.5, -3.5], 7);
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/positron/{z}/{x}/{y}{r}.png', {
-  attribution: '© OpenStreetMap contributors | © CARTO',
-  maxZoom: 19
+L.tileLayer('https://tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors',
+  maxZoom: 18,
+  maxNativeZoom: 18
 }).addTo(map);
 
 // Green marker for hills

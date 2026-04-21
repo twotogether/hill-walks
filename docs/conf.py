@@ -18,7 +18,7 @@ html_theme_options = {
 
 myst_enable_extensions = [
     "deflist",
-    "html",
+    "colon_fence",
 ]
 
 source_suffix = {

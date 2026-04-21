@@ -11,7 +11,7 @@ map
 
 ## Regions
 
-- [East Lothian](regions/east-lothian)
-- [Scottish Borders](regions/scottish-borders)
+- [East Lothian](regions/east-lothian/index)
+- [Scottish Borders](regions/scottish-borders/index)
 
-View all hills on the [interactive map](map.md).
+View all hills on the [interactive map](map).
