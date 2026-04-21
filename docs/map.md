@@ -6,6 +6,15 @@ All hills climbed are marked with green dots on the map below.
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/leaflet-gpx.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/leaflet-gpx.min.js"></script>
+
+<div style="margin-bottom: 10px;">
+  <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px;">
+    <input type="checkbox" id="gpxToggle" checked>
+    Show GPX Trails
+  </label>
+</div>
 
 <div id="map" style="height: 600px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></div>
 
@@ -60,6 +69,9 @@ const hillsData = {
   ]
 };
 
+// GPX layer group
+const gpxLayers = {};
+
 // Load hills and add markers
 if (hillsData.hills && hillsData.hills.length > 0) {
   console.log('Adding', hillsData.hills.length, 'hills to map');
@@ -73,6 +85,29 @@ if (hillsData.hills && hillsData.hills.length > 0) {
         <div><strong>Elevation:</strong> ${hill.elevation}m</div>
       `)
       .addTo(map);
+    
+    // Try to load GPX file for this hill
+    const gpxFilePath = `${hill.region.toLowerCase().replace(/\s+/g, '-')}/gpx/${hill.name.toLowerCase().replace(/\s+/g, '-')}.gpx`;
+    new L.GPX(gpxFilePath, {
+      async: true,
+      marker: {
+        startIconUrl: null,
+        endIconUrl: null,
+        shadowUrl: null
+      },
+      polyline_options: {
+        color: 'blue',
+        weight: 3,
+        opacity: 0.7
+      }
+    }).on('loaded', function(e) {
+      gpxLayers[hill.name] = e.target;
+      if (document.getElementById('gpxToggle').checked) {
+        map.addLayer(e.target);
+      }
+    }).on('error', function() {
+      console.log(`No GPX file found for ${hill.name}`);
+    });
   });
   
   // Center map on first hill
@@ -82,6 +117,17 @@ if (hillsData.hills && hillsData.hills.length > 0) {
 } else {
   console.error('No hills data found');
 }
+
+// GPX toggle functionality
+document.getElementById('gpxToggle').addEventListener('change', function(e) {
+  Object.values(gpxLayers).forEach(layer => {
+    if (e.target.checked) {
+      map.addLayer(layer);
+    } else {
+      map.removeLayer(layer);
+    }
+  });
+});
 </script>
 
 ```
