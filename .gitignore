@@ -1,0 +1,19 @@
+# Sphinx build
+_build/
+.doctrees/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

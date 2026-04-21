@@ -1,0 +1,24 @@
+{
+  "hills": [
+    {
+      "name": "North Berwick Law",
+      "region": "East Lothian",
+      "latitude": 56.0588,
+      "longitude": -2.1384,
+      "elevation": 187,
+      "difficulty": "Easy",
+      "type": "Volcanic cone",
+      "url": "regions/east-lothian/north-berwick-law.html"
+    },
+    {
+      "name": "Eildon Mid Hill",
+      "region": "East Lothian",
+      "latitude": 55.4489,
+      "longitude": -2.7131,
+      "elevation": 422,
+      "difficulty": "Medium",
+      "type": "Moorland",
+      "url": "regions/east-lothian/eildon-mid-hill.html"
+    }
+  ]
+}
