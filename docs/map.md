@@ -36,8 +36,8 @@ const greenTriangleSVG = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/
 const hillIcon = L.icon({
   iconUrl: greenTriangleSVG,
   iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32]
+  iconAnchor: [16, 22],  // Position triangle point at coordinate
+  popupAnchor: [0, -22]
 });
 
 // Hill data
