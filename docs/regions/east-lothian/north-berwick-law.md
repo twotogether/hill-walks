@@ -6,9 +6,9 @@
 |-------|-------|
 | **Coordinates** | 56.048825, -2.713749 |
 | **Elevation** | 187 m |
-| **Height and drop** | |
-| **Summit feature** | |
-| **Class list** | |
+| **Height and drop** | ~122 m prominence |
+| **Summit feature** | Trig point, view indicator, whale jawbones, Iron Age fort ruins |
+| **Class list** | Sub-2000 |
 | **Date of ascent** | |
 
 ## Description

@@ -5,10 +5,10 @@
 | Field | Value |
 |-------|-------|
 | **Coordinates** | 55.582169, -2.718219 |
-| **Elevation** | 422 m |
-| **Height and drop** | |
-| **Summit feature** | |
-| **Class list** | |
+| **Elevation** | 422 m (1385 ft) |
+| **Height and drop** | Steep sides, prominent prominence |
+| **Summit feature** | Trig point, view indicator |
+| **Class list** | Graham |
 | **Date of ascent** | |
 
 ## Description
