@@ -30,14 +30,14 @@ Buses and trains to North Berwick
 
 ## Photos
 
-![North Berwick Law 1](../east-lothian/images/north-berwick-law/_DSF2889.jpg)
+![](../east-lothian/images/north-berwick-law/_DSF2889.jpg)
 
-![North Berwick Law 2](../east-lothian/images/north-berwick-law/_DSF2890.jpg)
+![](../east-lothian/images/north-berwick-law/_DSF2890.jpg)
 
-![North Berwick Law 3](../east-lothian/images/north-berwick-law/_DSF2892.jpg)
+![](../east-lothian/images/north-berwick-law/_DSF2892.jpg)
 
-![North Berwick Law 4](../east-lothian/images/north-berwick-law/_DSF2893.jpg)
+![](../east-lothian/images/north-berwick-law/_DSF2893.jpg)
 
-![North Berwick Law 5](../east-lothian/images/north-berwick-law/_DSF2895.jpg)
+![](../east-lothian/images/north-berwick-law/_DSF2895.jpg)
 
-![North Berwick Law 6](../east-lothian/images/north-berwick-law/_DSF2897.jpg)
+![](../east-lothian/images/north-berwick-law/_DSF2897.jpg)

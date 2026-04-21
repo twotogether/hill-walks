@@ -6,10 +6,9 @@
 |-------|-------|
 | **Coordinates** | 55.582169, -2.718219 |
 | **Elevation** | 422 m (1385 ft) |
-| **Height and drop** | Steep sides, prominent prominence |
 | **Summit feature** | Trig point, view indicator |
-| **Class list** | Graham |
-| **Date of ascent** | |
+| **Class list** | Marilyn, Hump, 4s (400-499m), Yeaman |
+| **Date of ascent** | 19-APR-2026 |
 
 ## Description
 
@@ -23,11 +22,15 @@ Start from Melrose town centre and follow the marked path up the north slope. Th
 
 ### Car Parking
 
-Add parking details here...
+- Free car parks in Melrose
+  - St. Dunstane's car park
+  - Nutwood car park
+- Street parking near starting point on Dingleton Road
 
 ### Public Transport
 
-Add public transport details here...
+- Borders buses from Edinburgh to Melrose
+- Borders rail from Edinburgh to Tweedbank
 
 ## Photos
 
