@@ -28,24 +28,45 @@ const hillIcon = L.icon({
   shadowSize: [41, 41]
 });
 
-// Load hills from JSON
-fetch('region-metadata.json')
-  .then(response => response.json())
-  .then(data => {
-    data.hills.forEach(hill => {
-      const marker = L.marker([hill.latitude, hill.longitude], { icon: hillIcon })
-        .bindPopup(`
-          <div style="font-weight: bold; margin-bottom: 5px;">${hill.name}</div>
-          <div><strong>Region:</strong> ${hill.region}</div>
-          <div><strong>Elevation:</strong> ${hill.elevation}m</div>
-          <div><strong>Difficulty:</strong> ${hill.difficulty}</div>
-          <div><strong>Type:</strong> ${hill.type}</div>
-          <div style="margin-top: 8px;"><a href="${hill.url}">View details →</a></div>
-        `)
-        .addTo(map);
-    });
-  })
-  .catch(error => console.error('Error loading hills:', error));
+// Hill data
+const hillsData = {
+  "hills": [
+    {
+      "name": "North Berwick Law",
+      "region": "East Lothian",
+      "latitude": 56.0588,
+      "longitude": -2.1384,
+      "elevation": 187,
+      "difficulty": "Easy",
+      "type": "Volcanic cone",
+      "url": "regions/east-lothian/north-berwick-law.html"
+    },
+    {
+      "name": "Eildon Mid Hill",
+      "region": "East Lothian",
+      "latitude": 55.4489,
+      "longitude": -2.7131,
+      "elevation": 422,
+      "difficulty": "Medium",
+      "type": "Moorland",
+      "url": "regions/east-lothian/eildon-mid-hill.html"
+    }
+  ]
+};
+
+// Load hills and add markers
+hillsData.hills.forEach(hill => {
+  const marker = L.marker([hill.latitude, hill.longitude], { icon: hillIcon })
+    .bindPopup(`
+      <div style="font-weight: bold; margin-bottom: 5px;">${hill.name}</div>
+      <div><strong>Region:</strong> ${hill.region}</div>
+      <div><strong>Elevation:</strong> ${hill.elevation}m</div>
+      <div><strong>Difficulty:</strong> ${hill.difficulty}</div>
+      <div><strong>Type:</strong> ${hill.type}</div>
+      <div style="margin-top: 8px;"><a href="${hill.url}">View details →</a></div>
+    `)
+    .addTo(map);
+});
 </script>
 
 ```
