@@ -9,6 +9,7 @@ copy_gpx_files()
 project = 'Hill Walks'
 copyright = '2026, Mohana Das'
 author = 'Mohana Das'
+html_title = 'Hill Walks'
 
 extensions = [
     'myst_parser',
