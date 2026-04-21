@@ -38,30 +38,22 @@ figcaption {
   padding-bottom: 2rem;
 }
 
-/* TOC and link colors - green theme */
-.toc-tree a,
-.toc-tree a:visited,
+/* Link colors - green theme */
 a.reference.internal,
 a.reference.internal:visited {
   color: #22c55e;
 }
 
-.toc-tree a:hover,
 a.reference.internal:hover {
   color: #16a34a;
-  text-decoration: underline;
 }
 
-/* Sidebar TOC active/current item */
-.toc-tree .current > a,
-.toc-tree .current > a:visited {
+/* Sidebar TOC - minimal styling, let Furo handle structure */
+.sidebar-tree a.reference.internal {
+  color: inherit;
+}
+
+.sidebar-tree a.current.reference.internal {
   color: #22c55e;
   font-weight: 600;
-}
-
-/* Sidebar background for current item */
-.toc-tree li.current {
-  background-color: rgba(34, 197, 94, 0.1);
-  border-left: 3px solid #22c55e;
-  padding-left: 0.5rem;
 }
