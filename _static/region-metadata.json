@@ -1,0 +1,18 @@
+{
+  "hills": [
+    {
+      "name": "North Berwick Law",
+      "region": "East Lothian",
+      "latitude": 56.048825,
+      "longitude": -2.713749,
+      "elevation": 187
+    },
+    {
+      "name": "Eildon Mid Hill",
+      "region": "Scottish Borders",
+      "latitude": 55.582169,
+      "longitude": -2.718219,
+      "elevation": 422
+    }
+  ]
+}
