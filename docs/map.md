@@ -13,19 +13,31 @@ All hills climbed are marked with green dots on the map below.
 // Initialize map centered on Scotland
 const map = L.map('map').setView([55.5, -3.5], 7);
 
-// OpenTopoMap - highly accurate UK terrain and OS-aligned mapping
-L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-  attribution: 'Map data: &copy; OpenStreetMap contributors | Rendering: &copy; OpenTopoMap',
-  maxZoom: 17
-}).addTo(map);
+// OS Maps API - Ordnance Survey
+// Get free API key at: https://osdatahub.os.uk/
+const osApiKey = 'YOUR_OS_API_KEY_HERE'; // Replace with your OS Maps API key
 
-// Green triangle marker for hills
-const greenTriangleSVG = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2322c55e"><polygon points="12,2 22,20 2,20"/></svg>';
+if (osApiKey !== 'YOUR_OS_API_KEY_HERE') {
+  L.tileLayer(`https://api.os.uk/maps/raster/v1/zxy/Light_3857/{z}/{x}/{y}.png?key=${osApiKey}`, {
+    attribution: '&copy; Crown copyright and database right ' + new Date().getFullYear() + ' Ordnance Survey',
+    maxZoom: 20
+  }).addTo(map);
+} else {
+  // Fallback to OpenTopoMap if no API key
+  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data: &copy; OpenStreetMap contributors | Rendering: &copy; OpenTopoMap',
+    maxZoom: 17
+  }).addTo(map);
+  console.warn('OS Maps API key not set. Using OpenTopoMap as fallback. Get a free key at https://osdatahub.os.uk/');
+}
+
+// Green triangle marker for hills - enhanced visibility
+const greenTriangleSVG = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="%2322c55e" stroke="white" stroke-width="2"/><polygon points="16,8 24,22 8,22" fill="white"/></svg>';
 const hillIcon = L.icon({
   iconUrl: greenTriangleSVG,
-  iconSize: [20, 20],
-  iconAnchor: [10, 16],
-  popupAnchor: [0, -16]
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32]
 });
 
 // Hill data
