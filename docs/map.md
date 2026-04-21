@@ -87,7 +87,8 @@ if (hillsData.hills && hillsData.hills.length > 0) {
       .addTo(map);
     
     // Try to load GPX file for this hill
-    const gpxFilePath = `${hill.region.toLowerCase().replace(/\s+/g, '-')}/gpx/${hill.name.toLowerCase().replace(/\s+/g, '-')}.gpx`;
+    const hillPath = hill.name.toLowerCase().replace(/\s+/g, '-');
+    const gpxFilePath = `_static/gpx/${hillPath}.gpx`;
     console.log(`Attempting to load GPX: ${gpxFilePath}`);
     new L.GPX(gpxFilePath, {
       async: true,
