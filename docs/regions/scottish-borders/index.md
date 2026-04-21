@@ -2,6 +2,7 @@
 
 ```{toctree}
 
+eildon-mid-hill
 example
 ```
 

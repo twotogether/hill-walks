@@ -31,6 +31,6 @@ Add public transport details here...
 
 ## Photos
 
-![Eildon Hills from distance](../east-lothian/images/eildon-mid-hill-view.jpg)
+![Eildon Hills from distance](../scottish-borders/images/eildon-mid-hill-view.jpg)
 
 *The distinctive triple peaks of the Eildon Hills.*
