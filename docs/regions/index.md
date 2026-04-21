@@ -1,9 +1,4 @@
 # Regions
 
-```{toctree}
-
-east-lothian/index
-scottish-borders/index
-```
-
-Explore hill walks by region.
+- [East Lothian](east-lothian/index)
+- [Scottish Borders](scottish-borders/index)

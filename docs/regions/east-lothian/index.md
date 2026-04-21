@@ -1,8 +1,3 @@
 # East Lothian
 
-```{toctree}
-
-north-berwick-law
-```
-
-Hills climbed in East Lothian.
+- [North Berwick Law](north-berwick-law)
