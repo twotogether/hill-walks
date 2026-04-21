@@ -2,7 +2,7 @@
 
 ```{toctree}
 
-scottish-borders/example
+example
 ```
 
 Hills climbed in Scottish Borders.

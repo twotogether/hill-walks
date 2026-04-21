@@ -2,8 +2,8 @@
 
 ```{toctree}
 
-east-lothian
-scottish-borders
+east-lothian/index
+scottish-borders/index
 ```
 
 Explore hill walks by region.

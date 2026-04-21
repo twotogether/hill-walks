@@ -2,8 +2,8 @@
 
 ```{toctree}
 
-east-lothian/north-berwick-law
-east-lothian/eildon-mid-hill
+north-berwick-law
+eildon-mid-hill
 ```
 
 Hills climbed in East Lothian.
