@@ -4,7 +4,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Coordinates** | 56.04859, -2.71597 |
+| **Coordinates** | 56.049224, -2.719218 |
 | **Hill Type** | Volcanic cone |
 | **Difficulty** | Easy |
 | **Elevation** | 187 m |

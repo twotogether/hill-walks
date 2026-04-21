@@ -34,8 +34,8 @@ const hillsData = {
     {
       "name": "North Berwick Law",
       "region": "East Lothian",
-      "latitude": 56.04859,
-      "longitude": -2.71597,
+      "latitude": 56.049224,
+      "longitude": -2.719218,
       "elevation": 187,
       "difficulty": "Easy",
       "type": "Volcanic cone",
