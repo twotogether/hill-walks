@@ -48,20 +48,14 @@ const hillsData = {
       "region": "East Lothian",
       "latitude": 56.048825,
       "longitude": -2.713749,
-      "elevation": 187,
-      "difficulty": "Easy",
-      "type": "Volcanic cone",
-      "url": "regions/east-lothian/north-berwick-law.html"
+      "elevation": 187
     },
     {
       "name": "Eildon Mid Hill",
       "region": "East Lothian",
       "latitude": 55.582169,
       "longitude": -2.718219,
-      "elevation": 422,
-      "difficulty": "Medium",
-      "type": "Moorland",
-      "url": "regions/east-lothian/eildon-mid-hill.html"
+      "elevation": 422
     }
   ]
 };
@@ -77,9 +71,6 @@ if (hillsData.hills && hillsData.hills.length > 0) {
         <div style="font-weight: bold; margin-bottom: 5px;">${hill.name}</div>
         <div><strong>Region:</strong> ${hill.region}</div>
         <div><strong>Elevation:</strong> ${hill.elevation}m</div>
-        <div><strong>Difficulty:</strong> ${hill.difficulty}</div>
-        <div><strong>Type:</strong> ${hill.type}</div>
-        <div style="margin-top: 8px;"><a href="${hill.url}">View details →</a></div>
       `)
       .addTo(map);
   });

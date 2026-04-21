@@ -5,10 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Coordinates** | 55.582169, -2.718219 |
-| **Hill Type** | Moorland |
-| **Difficulty** | Medium |
 | **Elevation** | 422 m |
-| **Region** | East Lothian |
+| **Height and drop** | |
+| **Summit feature** | |
+| **Class list** | |
+| **Date of ascent** | |
 
 ## Description
 
@@ -17,6 +18,16 @@ Eildon Mid Hill is the highest of the three Eildon peaks, located in the Scottis
 ## Route
 
 Start from Melrose town centre and follow the marked path up the north slope. The terrain is steep in places but well-established. The summit offers panoramic views of the River Tweed valley and surrounding hills.
+
+## How to Reach
+
+### Car Parking
+
+Add parking details here...
+
+### Public Transport
+
+Add public transport details here...
 
 ## Photos
 
