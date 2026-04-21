@@ -11,11 +11,15 @@ docs/
 ├── region-metadata.json     # Centralized metadata for all hills
 └── regions/
     ├── index.md
-    ├── east-lothian.md
-    └── east-lothian/
-        ├── images/          # Photos for East Lothian hills
-        ├── north-berwick-law.md
-        └── eildon-mid-hill.md
+    ├── east-lothian/
+    │   ├── index.md         # Region page
+    │   ├── images/          # Photos for East Lothian hills
+    │   ├── north-berwick-law.md
+    │   └── eildon-mid-hill.md
+    └── scottish-borders/
+        ├── index.md         # Region page
+        ├── images/
+        └── example.md
 ```
 
 ## Adding a New Hill
@@ -60,11 +64,11 @@ docs/
    }
    ```
 
-4. **Add to region index** in `docs/regions/[region-name].md`:
+4. **Add to region index** in `docs/regions/[region-name]/index.md`:
    ```markdown
    ```{toctree}
 
-   [region-name]/[hill-name]
+   [hill-name]
    ```
    ```
 
