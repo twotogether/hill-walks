@@ -30,32 +30,14 @@ Buses and trains to North Berwick
 
 ## Photos
 
-```{figure} ../east-lothian/images/north-berwick-law/_DSF2889.jpg
-:alt: North Berwick Law
-View from the approach path
-```
+![View from the approach path](../east-lothian/images/north-berwick-law/_DSF2889.jpg)
 
-```{figure} ../east-lothian/images/north-berwick-law/_DSF2890.jpg
-:alt: North Berwick Law
-Ascending towards the summit
-```
+![Ascending towards the summit](../east-lothian/images/north-berwick-law/_DSF2890.jpg)
 
-```{figure} ../east-lothian/images/north-berwick-law/_DSF2892.jpg
-:alt: North Berwick Law
-Summit approach with whale jawbones
-```
+![Summit approach with whale jawbones](../east-lothian/images/north-berwick-law/_DSF2892.jpg)
 
-```{figure} ../east-lothian/images/north-berwick-law/_DSF2893.jpg
-:alt: North Berwick Law
-Firth of Forth views from summit
-```
+![Firth of Forth views from summit](../east-lothian/images/north-berwick-law/_DSF2893.jpg)
 
-```{figure} ../east-lothian/images/north-berwick-law/_DSF2895.jpg
-:alt: North Berwick Law
-Panoramic view from the top
-```
+![Panoramic view from the top](../east-lothian/images/north-berwick-law/_DSF2895.jpg)
 
-```{figure} ../east-lothian/images/north-berwick-law/_DSF2897.jpg
-:alt: North Berwick Law
-Bass Rock visible in the distance
-```
+![Bass Rock visible in the distance](../east-lothian/images/north-berwick-law/_DSF2897.jpg)
