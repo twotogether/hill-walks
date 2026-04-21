@@ -19,14 +19,13 @@ L.tileLayer('https://tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
   maxNativeZoom: 18
 }).addTo(map);
 
-// Green marker for hills
+// Green triangle marker for hills
+const greenTriangleSVG = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2322c55e"><polygon points="12,2 22,20 2,20"/></svg>';
 const hillIcon = L.icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
+  iconUrl: greenTriangleSVG,
+  iconSize: [20, 20],
+  iconAnchor: [10, 16],
+  popupAnchor: [0, -16]
 });
 
 // Hill data
