@@ -37,6 +37,7 @@ Buses and trains to North Berwick
 ```{figure} images/north-berwick-law/_DSF2889.jpg
 View from the approach path (note that we walked from East Linton)
 ```
+</br>
 
 ```{figure} images/north-berwick-law/_DSF2890.jpg
 Spot the rock climbers

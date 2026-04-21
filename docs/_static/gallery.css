@@ -32,3 +32,8 @@ h5 {
 h6 {
   font-size: 0.9rem;
 }
+
+/* Figure caption padding */
+figcaption {
+  padding-bottom: 2rem;
+}
