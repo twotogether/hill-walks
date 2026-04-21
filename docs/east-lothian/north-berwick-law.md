@@ -14,7 +14,9 @@
 
 North Berwick Law is a distinctive volcanic cone located at the mouth of the Firth of Forth. The prominent summit is visible for miles around and offers spectacular views across the Firth of Forth and the surrounding landscape.
 
-The walk is steep in parts, and may call for some scrambling especially if you are a short human like me :) 
+The walk is steep in parts, and may call for some scrambling especially if you are a short human like me.
+
+AllTrails Route: [North Berwick Law](https://www.alltrails.com/explore/custom-routes/north-berwick-law-2df3078)
 
 ## Route
 
