@@ -6,10 +6,9 @@
 |-------|-------|
 | **Coordinates** | 56.048825, -2.713749 |
 | **Elevation** | 187 m |
-| **Height and drop** | ~122 m prominence |
-| **Summit feature** | Trig point, view indicator, whale jawbones, Iron Age fort ruins |
-| **Class list** | Sub-2000 |
-| **Date of ascent** | |
+| **Summit feature** | Trig point, view indicator, whale jawbones |
+| **Class list** | Marilyn, Hump, Tump (100-199m), Yeaman |
+| **Date of ascent** | 2-NOV-2025 |
 
 ## Description
 
@@ -23,14 +22,22 @@ The main path climbs steadily from the car park near the town centre. The final 
 
 ### Car Parking
 
-Add parking details here...
+[North Berwick Law car park](https://maps.app.goo.gl/65doBqmz5VsTZChS6)
 
 ### Public Transport
 
-Add public transport details here...
+Buses and trains to North Berwick
 
 ## Photos
 
-![North Berwick Law Summit](../east-lothian/images/north-berwick-law-summit.jpg)
+![North Berwick Law 1](../east-lothian/images/north-berwick-law/_DSF2889.jpg)
 
-*The distinctive profile of North Berwick Law with the Firth of Forth beyond.*
+![North Berwick Law 2](../east-lothian/images/north-berwick-law/_DSF2890.jpg)
+
+![North Berwick Law 3](../east-lothian/images/north-berwick-law/_DSF2892.jpg)
+
+![North Berwick Law 4](../east-lothian/images/north-berwick-law/_DSF2893.jpg)
+
+![North Berwick Law 5](../east-lothian/images/north-berwick-law/_DSF2895.jpg)
+
+![North Berwick Law 6](../east-lothian/images/north-berwick-law/_DSF2897.jpg)
