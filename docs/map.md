@@ -55,18 +55,30 @@ const hillsData = {
 };
 
 // Load hills and add markers
-hillsData.hills.forEach(hill => {
-  const marker = L.marker([hill.latitude, hill.longitude], { icon: hillIcon })
-    .bindPopup(`
-      <div style="font-weight: bold; margin-bottom: 5px;">${hill.name}</div>
-      <div><strong>Region:</strong> ${hill.region}</div>
-      <div><strong>Elevation:</strong> ${hill.elevation}m</div>
-      <div><strong>Difficulty:</strong> ${hill.difficulty}</div>
-      <div><strong>Type:</strong> ${hill.type}</div>
-      <div style="margin-top: 8px;"><a href="${hill.url}">View details →</a></div>
-    `)
-    .addTo(map);
-});
+if (hillsData.hills && hillsData.hills.length > 0) {
+  console.log('Adding', hillsData.hills.length, 'hills to map');
+  
+  hillsData.hills.forEach(hill => {
+    console.log(`Adding marker: ${hill.name} at [${hill.latitude}, ${hill.longitude}]`);
+    const marker = L.marker([hill.latitude, hill.longitude], { icon: hillIcon })
+      .bindPopup(`
+        <div style="font-weight: bold; margin-bottom: 5px;">${hill.name}</div>
+        <div><strong>Region:</strong> ${hill.region}</div>
+        <div><strong>Elevation:</strong> ${hill.elevation}m</div>
+        <div><strong>Difficulty:</strong> ${hill.difficulty}</div>
+        <div><strong>Type:</strong> ${hill.type}</div>
+        <div style="margin-top: 8px;"><a href="${hill.url}">View details →</a></div>
+      `)
+      .addTo(map);
+  });
+  
+  // Center map on first hill
+  if (hillsData.hills[0]) {
+    map.setView([hillsData.hills[0].latitude, hillsData.hills[0].longitude], 10);
+  }
+} else {
+  console.error('No hills data found');
+}
 </script>
 
 ```
