@@ -22,6 +22,16 @@ def copy_gpx_files():
 
     for gpx_file in gpx_files:
         dest = static_gpx_dir / gpx_file.name
+
+        # Skip if file already exists and is identical
+        if dest.exists():
+            src_stat = gpx_file.stat()
+            dst_stat = dest.stat()
+            # Compare size and modification time
+            if src_stat.st_size == dst_stat.st_size and src_stat.st_mtime <= dst_stat.st_mtime:
+                print(f"  [SKIP] {gpx_file.relative_to(docs_dir)} (already up-to-date)")
+                continue
+
         try:
             shutil.copy2(gpx_file, dest)
             print(f"  [OK] {gpx_file.relative_to(docs_dir)}")
@@ -32,9 +42,9 @@ def copy_gpx_files():
                 shutil.copy2(gpx_file, dest)
                 print(f"  [OK] {gpx_file.relative_to(docs_dir)}")
             except Exception as e:
-                print(f"  [SKIP] {gpx_file.name}: {e}")
+                print(f"  [ERROR] {gpx_file.name}: {e}")
         except Exception as e:
-            print(f"  [SKIP] {gpx_file.name}: {e}")
+            print(f"  [ERROR] {gpx_file.name}: {e}")
 
 if __name__ == "__main__":
     copy_gpx_files()
