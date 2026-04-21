@@ -34,8 +34,8 @@ const hillsData = {
     {
       "name": "North Berwick Law",
       "region": "East Lothian",
-      "latitude": 56.0588,
-      "longitude": -2.1384,
+      "latitude": 56.04859,
+      "longitude": -2.71597,
       "elevation": 187,
       "difficulty": "Easy",
       "type": "Volcanic cone",
@@ -44,8 +44,8 @@ const hillsData = {
     {
       "name": "Eildon Mid Hill",
       "region": "East Lothian",
-      "latitude": 55.4489,
-      "longitude": -2.7131,
+      "latitude": 55.5813,
+      "longitude": 2.71855,
       "elevation": 422,
       "difficulty": "Medium",
       "type": "Moorland",
