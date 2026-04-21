@@ -1,4 +1,7 @@
 # Regions
 
-- [East Lothian](east-lothian/index)
-- [Scottish Borders](scottish-borders/index)
+```{toctree}
+
+east-lothian/index
+scottish-borders/index
+```
