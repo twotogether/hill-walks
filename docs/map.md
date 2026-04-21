@@ -87,29 +87,38 @@ if (hillsData.hills && hillsData.hills.length > 0) {
       .addTo(map);
     
     // Try to load GPX file for this hill
-    const hillPath = hill.name.toLowerCase().replace(/\s+/g, '-');
-    const gpxFilePath = `_static/gpx/${hillPath}.gpx`;
-    console.log(`Attempting to load GPX: ${gpxFilePath}`);
-    new L.GPX(gpxFilePath, {
-      async: true,
-      marker: {
-        startIconUrl: null,
-        endIconUrl: null,
-        shadowUrl: null
-      },
-      polyline_options: {
-        color: 'blue',
-        weight: 3,
-        opacity: 0.7
+    if (typeof L.GPX !== 'undefined') {
+      const hillPath = hill.name.toLowerCase().replace(/\s+/g, '-');
+      const gpxFilePath = `_static/gpx/${hillPath}.gpx`;
+      console.log(`Attempting to load GPX: ${gpxFilePath}`);
+      try {
+        new L.GPX(gpxFilePath, {
+          async: true,
+          marker: {
+            startIconUrl: null,
+            endIconUrl: null,
+            shadowUrl: null
+          },
+          polyline_options: {
+            color: 'blue',
+            weight: 3,
+            opacity: 0.7
+          }
+        }).on('loaded', function(e) {
+          console.log(`✓ GPX loaded for ${hill.name}`);
+          gpxLayers[hill.name] = e.target;
+          if (document.getElementById('gpxToggle').checked) {
+            map.addLayer(e.target);
+          }
+        }).on('error', function(e) {
+          console.error(`✗ Failed to load GPX for ${hill.name}:`, e);
+        });
+      } catch(err) {
+        console.error(`Error loading GPX for ${hill.name}:`, err);
       }
-    }).on('loaded', function(e) {
-      gpxLayers[hill.name] = e.target;
-      if (document.getElementById('gpxToggle').checked) {
-        map.addLayer(e.target);
-      }
-    }).on('error', function() {
-      console.log(`No GPX file found for ${hill.name}`);
-    });
+    } else {
+      console.warn('Leaflet-GPX library not loaded');
+    }
   });
   
   // Center map on first hill
